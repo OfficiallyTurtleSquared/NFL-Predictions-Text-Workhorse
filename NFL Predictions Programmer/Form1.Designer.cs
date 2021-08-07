@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.ariButton = new System.Windows.Forms.Button();
             this.noTouchyLabel = new System.Windows.Forms.Label();
             this.noTouchyLabel2 = new System.Windows.Forms.Label();
@@ -674,8 +675,9 @@
             this.Controls.Add(this.noTouchyLabel2);
             this.Controls.Add(this.noTouchyLabel);
             this.Controls.Add(this.ariButton);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "NFL Serializer";
+            this.Text = "NFL Predicitons Workhorse";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
