@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.757
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NFL Predictions Programmer", "NFL Predictions Programmer\NFL Predictions Programmer.csproj", "{EE0F6C93-8098-4D05-A88F-E7605E9C2AAE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EE0F6C93-8098-4D05-A88F-E7605E9C2AAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE0F6C93-8098-4D05-A88F-E7605E9C2AAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE0F6C93-8098-4D05-A88F-E7605E9C2AAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE0F6C93-8098-4D05-A88F-E7605E9C2AAE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C696169E-CC1E-4851-818E-219BCD8C768B}
+	EndGlobalSection
+EndGlobal
