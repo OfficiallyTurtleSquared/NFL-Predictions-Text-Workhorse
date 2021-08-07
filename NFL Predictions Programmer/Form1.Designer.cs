@@ -66,6 +66,13 @@
             this.resetButton = new System.Windows.Forms.Button();
             this.addButton = new System.Windows.Forms.Button();
             this.dumpButton = new System.Windows.Forms.Button();
+            this.leadBox = new System.Windows.Forms.TextBox();
+            this.noTouchyLabel3 = new System.Windows.Forms.Label();
+            this.noTouchyLabel4 = new System.Windows.Forms.Label();
+            this.followBox = new System.Windows.Forms.TextBox();
+            this.resultBox = new System.Windows.Forms.TextBox();
+            this.resultLabel = new System.Windows.Forms.Label();
+            this.percentClearButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // ariButton
@@ -508,7 +515,7 @@
             // 
             this.bigListbox.Location = new System.Drawing.Point(12, 346);
             this.bigListbox.Name = "bigListbox";
-            this.bigListbox.Size = new System.Drawing.Size(575, 735);
+            this.bigListbox.Size = new System.Drawing.Size(575, 498);
             this.bigListbox.TabIndex = 35;
             this.bigListbox.Text = "";
             // 
@@ -551,12 +558,84 @@
             this.dumpButton.UseVisualStyleBackColor = false;
             this.dumpButton.Click += new System.EventHandler(this.dumpButton_Click);
             // 
+            // leadBox
+            // 
+            this.leadBox.Location = new System.Drawing.Point(12, 902);
+            this.leadBox.Name = "leadBox";
+            this.leadBox.Size = new System.Drawing.Size(100, 20);
+            this.leadBox.TabIndex = 39;
+            // 
+            // noTouchyLabel3
+            // 
+            this.noTouchyLabel3.AutoSize = true;
+            this.noTouchyLabel3.ForeColor = System.Drawing.Color.White;
+            this.noTouchyLabel3.Location = new System.Drawing.Point(9, 877);
+            this.noTouchyLabel3.Name = "noTouchyLabel3";
+            this.noTouchyLabel3.Size = new System.Drawing.Size(125, 13);
+            this.noTouchyLabel3.TabIndex = 40;
+            this.noTouchyLabel3.Text = "Quick Percentage Finder";
+            // 
+            // noTouchyLabel4
+            // 
+            this.noTouchyLabel4.AutoSize = true;
+            this.noTouchyLabel4.ForeColor = System.Drawing.Color.White;
+            this.noTouchyLabel4.Location = new System.Drawing.Point(118, 905);
+            this.noTouchyLabel4.Name = "noTouchyLabel4";
+            this.noTouchyLabel4.Size = new System.Drawing.Size(16, 13);
+            this.noTouchyLabel4.TabIndex = 41;
+            this.noTouchyLabel4.Text = "of";
+            // 
+            // followBox
+            // 
+            this.followBox.Location = new System.Drawing.Point(140, 902);
+            this.followBox.Name = "followBox";
+            this.followBox.Size = new System.Drawing.Size(109, 20);
+            this.followBox.TabIndex = 42;
+            this.followBox.TextChanged += new System.EventHandler(this.followBox_TextChanged);
+            // 
+            // resultBox
+            // 
+            this.resultBox.Location = new System.Drawing.Point(277, 902);
+            this.resultBox.Name = "resultBox";
+            this.resultBox.Size = new System.Drawing.Size(100, 20);
+            this.resultBox.TabIndex = 43;
+            // 
+            // resultLabel
+            // 
+            this.resultLabel.AutoSize = true;
+            this.resultLabel.ForeColor = System.Drawing.Color.White;
+            this.resultLabel.Location = new System.Drawing.Point(255, 905);
+            this.resultLabel.Name = "resultLabel";
+            this.resultLabel.Size = new System.Drawing.Size(14, 13);
+            this.resultLabel.TabIndex = 44;
+            this.resultLabel.Text = "is";
+            // 
+            // percentClearButton
+            // 
+            this.percentClearButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(170)))), ((int)(((byte)(181)))));
+            this.percentClearButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.percentClearButton.ForeColor = System.Drawing.Color.White;
+            this.percentClearButton.Location = new System.Drawing.Point(485, 900);
+            this.percentClearButton.Name = "percentClearButton";
+            this.percentClearButton.Size = new System.Drawing.Size(102, 23);
+            this.percentClearButton.TabIndex = 45;
+            this.percentClearButton.Text = "Clear Percentages";
+            this.percentClearButton.UseVisualStyleBackColor = false;
+            this.percentClearButton.Click += new System.EventHandler(this.percentClearButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(47)))), ((int)(((byte)(51)))));
-            this.ClientSize = new System.Drawing.Size(610, 1111);
+            this.ClientSize = new System.Drawing.Size(610, 940);
+            this.Controls.Add(this.percentClearButton);
+            this.Controls.Add(this.resultLabel);
+            this.Controls.Add(this.resultBox);
+            this.Controls.Add(this.followBox);
+            this.Controls.Add(this.noTouchyLabel4);
+            this.Controls.Add(this.noTouchyLabel3);
+            this.Controls.Add(this.leadBox);
             this.Controls.Add(this.dumpButton);
             this.Controls.Add(this.addButton);
             this.Controls.Add(this.resetButton);
@@ -643,6 +722,13 @@
         private System.Windows.Forms.Button resetButton;
         private System.Windows.Forms.Button addButton;
         private System.Windows.Forms.Button dumpButton;
+        private System.Windows.Forms.TextBox leadBox;
+        private System.Windows.Forms.Label noTouchyLabel3;
+        private System.Windows.Forms.Label noTouchyLabel4;
+        private System.Windows.Forms.TextBox followBox;
+        private System.Windows.Forms.TextBox resultBox;
+        private System.Windows.Forms.Label resultLabel;
+        private System.Windows.Forms.Button percentClearButton;
     }
 }
 

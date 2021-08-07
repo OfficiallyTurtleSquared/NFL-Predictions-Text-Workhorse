@@ -18,7 +18,14 @@ namespace NFL_Predictions_Programmer
         {
             InitializeComponent();
         }
-        
+
+        public float numberparser(string input)
+        {
+            float output;
+            float.TryParse(input, out output);
+            return output;
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
             Console.WriteLine("NFL Serializer INIT");
@@ -568,6 +575,9 @@ namespace NFL_Predictions_Programmer
         {
             bigListbox.Clear();
         }
+
+
+
         #endregion
 
         #region teambools
@@ -603,6 +613,27 @@ namespace NFL_Predictions_Programmer
         public bool nyjClicked;
         public bool pitClicked;
         public bool tenClicked;
-        #endregion 
+        #endregion
+
+        private void percentClearButton_Click(object sender, EventArgs e)
+        {
+            leadBox.Clear();
+            followBox.Clear();
+            resultBox.Clear();
+        }
+
+        private void followBox_TextChanged(object sender, EventArgs e)
+        {
+            if (followBox.TextLength > 0)
+            {
+                float result = numberparser(leadBox.Text) / numberparser(followBox.Text);
+                resultBox.Text = result.ToString();
+            }
+            else
+            {
+                //donothing
+            }
+            
+        }
     }
 }
