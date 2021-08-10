@@ -83,6 +83,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -98,6 +99,38 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Icons\49ers.png" />
+    <Content Include="Icons\bears.png" />
+    <Content Include="Icons\bengals.png" />
+    <Content Include="Icons\bills.png" />
+    <Content Include="Icons\broncos.png" />
+    <Content Include="Icons\browns.png" />
+    <Content Include="Icons\buccs.png" />
+    <Content Include="Icons\cardinals.png" />
+    <Content Include="Icons\chargers.png" />
+    <Content Include="Icons\chiefs.png" />
+    <Content Include="Icons\colts.png" />
+    <Content Include="Icons\cowboys.png" />
+    <Content Include="Icons\dolphins.png" />
+    <Content Include="Icons\eagles.png" />
+    <Content Include="Icons\falcons.png" />
+    <Content Include="Icons\giants.png" />
+    <Content Include="Icons\jags.png" />
+    <Content Include="Icons\jets.png" />
+    <Content Include="Icons\lions.png" />
+    <Content Include="Icons\packers.png" />
+    <Content Include="Icons\panthers.png" />
+    <Content Include="Icons\patriots.png" />
+    <Content Include="Icons\raiders.png" />
+    <Content Include="Icons\rams.png" />
+    <Content Include="Icons\ravens.png" />
+    <Content Include="Icons\saints.png" />
+    <Content Include="Icons\seahawks.png" />
+    <Content Include="Icons\steelers.png" />
+    <Content Include="Icons\texans.png" />
+    <Content Include="Icons\titans.png" />
+    <Content Include="Icons\vikings.png" />
+    <Content Include="Icons\WTF.png" />
     <Content Include="QrvMjbl.ico" />
   </ItemGroup>
   <ItemGroup>
@@ -112,5 +145,6 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
