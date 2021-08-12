@@ -74,6 +74,19 @@
             this.resultBox = new System.Windows.Forms.TextBox();
             this.resultLabel = new System.Windows.Forms.Label();
             this.percentClearButton = new System.Windows.Forms.Button();
+            this.writeButton = new System.Windows.Forms.Button();
+            this.turtleCorrect = new System.Windows.Forms.TextBox();
+            this.turtleTotal = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.turtlePercentage = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.tomCorrect = new System.Windows.Forms.TextBox();
+            this.tomTotal = new System.Windows.Forms.TextBox();
+            this.tomPercentage = new System.Windows.Forms.TextBox();
+            this.readButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // ariButton
@@ -505,7 +518,7 @@
             // chiButton
             // 
             this.chiButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(170)))), ((int)(((byte)(181)))));
-            this.chiButton.BackgroundImage = global::NFL_Predictions_Programmer.Properties.Resources.bears;
+            this.chiButton.BackgroundImage = global::NFL_Predictions_Programmer.Properties.Resources.browns;
             this.chiButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.chiButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.chiButton.ForeColor = System.Drawing.Color.White;
@@ -548,7 +561,7 @@
             // 
             this.bigListbox.Location = new System.Drawing.Point(12, 364);
             this.bigListbox.Name = "bigListbox";
-            this.bigListbox.Size = new System.Drawing.Size(575, 498);
+            this.bigListbox.Size = new System.Drawing.Size(586, 498);
             this.bigListbox.TabIndex = 35;
             this.bigListbox.Text = "";
             // 
@@ -583,7 +596,7 @@
             this.dumpButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(170)))), ((int)(((byte)(181)))));
             this.dumpButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.dumpButton.ForeColor = System.Drawing.Color.White;
-            this.dumpButton.Location = new System.Drawing.Point(485, 335);
+            this.dumpButton.Location = new System.Drawing.Point(496, 335);
             this.dumpButton.Name = "dumpButton";
             this.dumpButton.Size = new System.Drawing.Size(102, 23);
             this.dumpButton.TabIndex = 38;
@@ -612,7 +625,7 @@
             // 
             this.noTouchyLabel4.AutoSize = true;
             this.noTouchyLabel4.ForeColor = System.Drawing.Color.White;
-            this.noTouchyLabel4.Location = new System.Drawing.Point(118, 905);
+            this.noTouchyLabel4.Location = new System.Drawing.Point(119, 905);
             this.noTouchyLabel4.Name = "noTouchyLabel4";
             this.noTouchyLabel4.Size = new System.Drawing.Size(16, 13);
             this.noTouchyLabel4.TabIndex = 41;
@@ -637,7 +650,7 @@
             // 
             this.resultLabel.AutoSize = true;
             this.resultLabel.ForeColor = System.Drawing.Color.White;
-            this.resultLabel.Location = new System.Drawing.Point(255, 905);
+            this.resultLabel.Location = new System.Drawing.Point(257, 905);
             this.resultLabel.Name = "resultLabel";
             this.resultLabel.Size = new System.Drawing.Size(14, 13);
             this.resultLabel.TabIndex = 44;
@@ -648,7 +661,7 @@
             this.percentClearButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(170)))), ((int)(((byte)(181)))));
             this.percentClearButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.percentClearButton.ForeColor = System.Drawing.Color.White;
-            this.percentClearButton.Location = new System.Drawing.Point(485, 900);
+            this.percentClearButton.Location = new System.Drawing.Point(496, 899);
             this.percentClearButton.Name = "percentClearButton";
             this.percentClearButton.Size = new System.Drawing.Size(102, 23);
             this.percentClearButton.TabIndex = 45;
@@ -656,13 +669,138 @@
             this.percentClearButton.UseVisualStyleBackColor = false;
             this.percentClearButton.Click += new System.EventHandler(this.percentClearButton_Click);
             // 
+            // writeButton
+            // 
+            this.writeButton.Location = new System.Drawing.Point(551, 955);
+            this.writeButton.Name = "writeButton";
+            this.writeButton.Size = new System.Drawing.Size(47, 30);
+            this.writeButton.TabIndex = 47;
+            this.writeButton.Text = "Write";
+            this.writeButton.UseVisualStyleBackColor = true;
+            this.writeButton.Click += new System.EventHandler(this.writeButton_Click);
+            // 
+            // turtleCorrect
+            // 
+            this.turtleCorrect.Location = new System.Drawing.Point(55, 952);
+            this.turtleCorrect.Name = "turtleCorrect";
+            this.turtleCorrect.Size = new System.Drawing.Size(104, 20);
+            this.turtleCorrect.TabIndex = 48;
+            // 
+            // turtleTotal
+            // 
+            this.turtleTotal.Location = new System.Drawing.Point(165, 952);
+            this.turtleTotal.Name = "turtleTotal";
+            this.turtleTotal.Size = new System.Drawing.Size(109, 20);
+            this.turtleTotal.TabIndex = 49;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(12, 955);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(37, 13);
+            this.label1.TabIndex = 50;
+            this.label1.Text = "Turtle:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(12, 981);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(31, 13);
+            this.label2.TabIndex = 51;
+            this.label2.Text = "Tom:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(88, 936);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(41, 13);
+            this.label3.TabIndex = 52;
+            this.label3.Text = "Correct";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(198, 936);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(31, 13);
+            this.label4.TabIndex = 53;
+            this.label4.Text = "Total";
+            // 
+            // turtlePercentage
+            // 
+            this.turtlePercentage.Location = new System.Drawing.Point(280, 952);
+            this.turtlePercentage.Name = "turtlePercentage";
+            this.turtlePercentage.Size = new System.Drawing.Size(109, 20);
+            this.turtlePercentage.TabIndex = 54;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(303, 936);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(62, 13);
+            this.label5.TabIndex = 55;
+            this.label5.Text = "Percentage";
+            // 
+            // tomCorrect
+            // 
+            this.tomCorrect.Location = new System.Drawing.Point(55, 978);
+            this.tomCorrect.Name = "tomCorrect";
+            this.tomCorrect.Size = new System.Drawing.Size(104, 20);
+            this.tomCorrect.TabIndex = 56;
+            // 
+            // tomTotal
+            // 
+            this.tomTotal.Location = new System.Drawing.Point(165, 978);
+            this.tomTotal.Name = "tomTotal";
+            this.tomTotal.Size = new System.Drawing.Size(109, 20);
+            this.tomTotal.TabIndex = 57;
+            // 
+            // tomPercentage
+            // 
+            this.tomPercentage.Location = new System.Drawing.Point(280, 978);
+            this.tomPercentage.Name = "tomPercentage";
+            this.tomPercentage.Size = new System.Drawing.Size(109, 20);
+            this.tomPercentage.TabIndex = 58;
+            // 
+            // readButton
+            // 
+            this.readButton.Location = new System.Drawing.Point(496, 955);
+            this.readButton.Name = "readButton";
+            this.readButton.Size = new System.Drawing.Size(49, 30);
+            this.readButton.TabIndex = 59;
+            this.readButton.Text = "Read";
+            this.readButton.UseVisualStyleBackColor = true;
+            this.readButton.Click += new System.EventHandler(this.readButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(47)))), ((int)(((byte)(51)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(610, 940);
+            this.ClientSize = new System.Drawing.Size(612, 1010);
+            this.Controls.Add(this.readButton);
+            this.Controls.Add(this.tomPercentage);
+            this.Controls.Add(this.tomTotal);
+            this.Controls.Add(this.tomCorrect);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.turtlePercentage);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.turtleTotal);
+            this.Controls.Add(this.turtleCorrect);
+            this.Controls.Add(this.writeButton);
             this.Controls.Add(this.balButton);
             this.Controls.Add(this.bufButton);
             this.Controls.Add(this.cinButton);
@@ -765,6 +903,19 @@
         private System.Windows.Forms.TextBox resultBox;
         private System.Windows.Forms.Label resultLabel;
         private System.Windows.Forms.Button percentClearButton;
+        private System.Windows.Forms.Button writeButton;
+        private System.Windows.Forms.TextBox turtleCorrect;
+        private System.Windows.Forms.TextBox turtleTotal;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox turtlePercentage;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox tomCorrect;
+        private System.Windows.Forms.TextBox tomTotal;
+        private System.Windows.Forms.TextBox tomPercentage;
+        private System.Windows.Forms.Button readButton;
     }
 }
 

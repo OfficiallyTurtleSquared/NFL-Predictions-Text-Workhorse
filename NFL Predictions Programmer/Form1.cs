@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ClosedXML.Excel;
+
 
 namespace NFL_Predictions_Programmer
 {
@@ -30,7 +33,9 @@ namespace NFL_Predictions_Programmer
         {
             Console.WriteLine("NFL Serializer INIT");
             resetButton.PerformClick();
-            Console.WriteLine("Bullshittery system .... Online.");
+            Console.WriteLine("TempRefresh - Successful");
+            readButton.PerformClick();
+            Console.WriteLine("Stats Faking - Successful");
         }
 
         #region teambuttonclickcommands
@@ -45,6 +50,7 @@ namespace NFL_Predictions_Programmer
             else
             {
                 agregator.Append($"ARI: \n");
+                addButton.PerformClick();
             }
 
         }
@@ -60,6 +66,7 @@ namespace NFL_Predictions_Programmer
             else
             {
                 agregator.Append($"ATL: \n");
+                addButton.PerformClick();
             }
 
         }
@@ -75,6 +82,7 @@ namespace NFL_Predictions_Programmer
             else
             {
                 agregator.Append($"CAR: \n");
+                addButton.PerformClick();
             }
 
         }
@@ -90,6 +98,7 @@ namespace NFL_Predictions_Programmer
             else
             {
                 agregator.Append($"CHI: \n");
+                addButton.PerformClick();
             }
 
         }
@@ -105,6 +114,7 @@ namespace NFL_Predictions_Programmer
             else
             {
                 agregator.Append($"DAL: \n");
+                addButton.PerformClick();
             }
 
         }
@@ -120,6 +130,7 @@ namespace NFL_Predictions_Programmer
             else
             {
                 agregator.Append($"DET: \n");
+                addButton.PerformClick();
             }
 
         }
@@ -135,6 +146,7 @@ namespace NFL_Predictions_Programmer
             else
             {
                 agregator.Append($" GB: \n");
+                addButton.PerformClick();
             }
 
         }
@@ -150,6 +162,7 @@ namespace NFL_Predictions_Programmer
             else
             {
                 agregator.Append($"LAR: \n");
+                addButton.PerformClick();
             }
 
         }
@@ -165,6 +178,7 @@ namespace NFL_Predictions_Programmer
             else
             {
                 agregator.Append($"MIN: \n");
+                addButton.PerformClick();
             }
 
         }
@@ -180,6 +194,7 @@ namespace NFL_Predictions_Programmer
             else
             {
                 agregator.Append($" NO: \n");
+                addButton.PerformClick();
             }
 
         }
@@ -195,6 +210,7 @@ namespace NFL_Predictions_Programmer
             else
             {
                 agregator.Append($"NYG: \n");
+                addButton.PerformClick();
             }
 
         }
@@ -210,6 +226,7 @@ namespace NFL_Predictions_Programmer
             else
             {
                 agregator.Append($"PHL: \n");
+                addButton.PerformClick();
             }
 
         }
@@ -225,6 +242,7 @@ namespace NFL_Predictions_Programmer
             else
             {
                 agregator.Append($"SFO: \n");
+                addButton.PerformClick();
             }
 
         }
@@ -240,6 +258,7 @@ namespace NFL_Predictions_Programmer
             else
             {
                 agregator.Append($"SEA: \n");
+                addButton.PerformClick();
             }
 
         }
@@ -255,6 +274,7 @@ namespace NFL_Predictions_Programmer
             else
             {
                 agregator.Append($" TB: \n");
+                addButton.PerformClick();
             }
 
         }
@@ -270,6 +290,7 @@ namespace NFL_Predictions_Programmer
             else
             {
                 agregator.Append($"WFT: \n");
+                addButton.PerformClick();
             }
 
         }
@@ -285,6 +306,7 @@ namespace NFL_Predictions_Programmer
             else
             {
                 agregator.Append($"BAL: \n");
+                addButton.PerformClick();
             }
 
         }
@@ -300,6 +322,7 @@ namespace NFL_Predictions_Programmer
             else
             {
                 agregator.Append($"BUF: \n");
+                addButton.PerformClick();
             }
 
         }
@@ -315,6 +338,7 @@ namespace NFL_Predictions_Programmer
             else
             {
                 agregator.Append($"CIN: \n");
+                addButton.PerformClick();
             }
 
         }
@@ -330,6 +354,7 @@ namespace NFL_Predictions_Programmer
             else
             {
                 agregator.Append($"CLE: \n");
+                addButton.PerformClick();
             }
 
         }
@@ -345,6 +370,7 @@ namespace NFL_Predictions_Programmer
             else
             {
                 agregator.Append($"DEN: \n");
+                addButton.PerformClick();
             }
 
         }
@@ -360,6 +386,7 @@ namespace NFL_Predictions_Programmer
             else
             {
                 agregator.Append($"TEX: \n");
+                addButton.PerformClick();
             }
 
         }
@@ -375,6 +402,7 @@ namespace NFL_Predictions_Programmer
             else
             {
                 agregator.Append($"IND: \n");
+                addButton.PerformClick();
             }
 
         }
@@ -390,6 +418,7 @@ namespace NFL_Predictions_Programmer
             else
             {
                 agregator.Append($"JAX: \n");
+                addButton.PerformClick();
             }
 
         }
@@ -405,6 +434,7 @@ namespace NFL_Predictions_Programmer
             else
             {
                 agregator.Append($" KC: \n");
+                addButton.PerformClick();
             }
 
         }
@@ -420,6 +450,7 @@ namespace NFL_Predictions_Programmer
             else
             {
                 agregator.Append($"LVR: \n");
+                addButton.PerformClick();
             }
 
         }
@@ -435,6 +466,7 @@ namespace NFL_Predictions_Programmer
             else
             {
                 agregator.Append($"LAC: \n");
+                addButton.PerformClick();
             }
 
         }
@@ -450,6 +482,7 @@ namespace NFL_Predictions_Programmer
             else
             {
                 agregator.Append($"MIA: \n");
+                addButton.PerformClick();
             }
 
         }
@@ -465,6 +498,7 @@ namespace NFL_Predictions_Programmer
             else
             {
                 agregator.Append($" NE: \n");
+                addButton.PerformClick();
             }
 
         }
@@ -480,6 +514,7 @@ namespace NFL_Predictions_Programmer
             else
             {
                 agregator.Append($"NYJ: \n");
+                addButton.PerformClick();
             }
 
         }
@@ -495,6 +530,7 @@ namespace NFL_Predictions_Programmer
             else
             {
                 agregator.Append($"PIT: \n");
+                addButton.PerformClick();
             }
 
         }
@@ -510,6 +546,7 @@ namespace NFL_Predictions_Programmer
             else
             {
                 agregator.Append($"TEN: \n");
+                addButton.PerformClick();
             }
 
         }
@@ -615,6 +652,11 @@ namespace NFL_Predictions_Programmer
         public bool tenClicked;
         #endregion
 
+
+        #region statsmanagement
+
+        
+
         private void percentClearButton_Click(object sender, EventArgs e)
         {
             leadBox.Clear();
@@ -635,5 +677,54 @@ namespace NFL_Predictions_Programmer
             }
             
         }
+
+        private void readButton_Click(object sender, EventArgs e)
+        {
+
+            var stats = new XLWorkbook($@"{Directory.GetCurrentDirectory().ToString()}\stats.xlsx");
+            var defaultSheet = stats.Worksheets.First();
+
+
+            float correct1 = numberparser(defaultSheet.Cell("B2").Value.ToString());
+            float total1 = numberparser(defaultSheet.Cell("C2").Value.ToString());
+            float correct2 = numberparser(defaultSheet.Cell("B3").Value.ToString());
+            float total2 = numberparser(defaultSheet.Cell("C3").Value.ToString());
+
+            turtleCorrect.Text = correct1.ToString();
+            turtleTotal.Text = total1.ToString();
+            turtlePercentage.Text = (correct1 / total1).ToString();
+
+            tomCorrect.Text = correct2.ToString();
+            tomTotal.Text = total2.ToString();
+            tomPercentage.Text = (correct2 / total2).ToString();
+            
+    }
+
+        private void writeButton_Click(object sender, EventArgs e)
+        {
+            var stats = new XLWorkbook($@"{Directory.GetCurrentDirectory().ToString()}\stats.xlsx");
+            var defaultSheet = stats.Worksheets.First();
+
+            float correct1 = numberparser(turtleCorrect.Text);
+            float total1 = numberparser(turtleTotal.Text);
+            float correct2 = numberparser(tomCorrect.Text);
+            float total2 = numberparser(tomTotal.Text);
+
+            defaultSheet.Cell("B2").Value = correct1;
+            defaultSheet.Cell("C2").Value = total1;
+            defaultSheet.Cell("B3").Value = correct2;
+            defaultSheet.Cell("C3").Value = total2;
+
+            stats.SaveAs($@"{Directory.GetCurrentDirectory().ToString()}\stats.xlsx");
+
+            System.Threading.Thread.Sleep(50);
+
+            readButton.PerformClick();
+            
+        }
+
+        #endregion
+
+
     }
 }
