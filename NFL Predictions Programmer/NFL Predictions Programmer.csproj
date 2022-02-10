@@ -270,6 +270,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\dolphins.png" />
+    <None Include="Resources\commander.png" />
     <Content Include="Resources\Icons\49ers.png" />
     <Content Include="Resources\Icons\bears.png" />
     <Content Include="Resources\Icons\bengals.png" />

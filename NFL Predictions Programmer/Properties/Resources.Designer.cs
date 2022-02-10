@@ -173,6 +173,16 @@ namespace NFL_Predictions_Programmer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap commander {
+            get {
+                object obj = ResourceManager.GetObject("commander", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cowboys {
             get {
                 object obj = ResourceManager.GetObject("cowboys", resourceCulture);
@@ -366,16 +376,6 @@ namespace NFL_Predictions_Programmer.Properties {
         internal static System.Drawing.Bitmap vikings {
             get {
                 object obj = ResourceManager.GetObject("vikings", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap WTF {
-            get {
-                object obj = ResourceManager.GetObject("WTF", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
