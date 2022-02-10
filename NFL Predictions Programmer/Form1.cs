@@ -680,23 +680,50 @@ namespace NFL_Predictions_Programmer
 
         private void readButton_Click(object sender, EventArgs e)
         {
+            var statBookURL = $@"{Directory.GetCurrentDirectory().ToString()}\stats.xlsx";
 
-            var stats = new XLWorkbook($@"{Directory.GetCurrentDirectory().ToString()}\stats.xlsx");
-            var defaultSheet = stats.Worksheets.First();
+            if (File.Exists(statBookURL))
+            {
+                var stats = new XLWorkbook($@"{Directory.GetCurrentDirectory().ToString()}\stats.xlsx");
+                var defaultSheet = stats.Worksheets.First();
 
 
-            float correct1 = numberparser(defaultSheet.Cell("B2").Value.ToString());
-            float total1 = numberparser(defaultSheet.Cell("C2").Value.ToString());
-            float correct2 = numberparser(defaultSheet.Cell("B3").Value.ToString());
-            float total2 = numberparser(defaultSheet.Cell("C3").Value.ToString());
+                float correct1 = numberparser(defaultSheet.Cell("B2").Value.ToString());
+                float total1 = numberparser(defaultSheet.Cell("C2").Value.ToString());
+                float correct2 = numberparser(defaultSheet.Cell("B3").Value.ToString());
+                float total2 = numberparser(defaultSheet.Cell("C3").Value.ToString());
 
-            turtleCorrect.Text = correct1.ToString();
-            turtleTotal.Text = total1.ToString();
-            turtlePercentage.Text = (correct1 / total1).ToString();
+                turtleCorrect.Text = correct1.ToString();
+                turtleTotal.Text = total1.ToString();
+                turtlePercentage.Text = (correct1 / total1).ToString();
 
-            tomCorrect.Text = correct2.ToString();
-            tomTotal.Text = total2.ToString();
-            tomPercentage.Text = (correct2 / total2).ToString();
+                tomCorrect.Text = correct2.ToString();
+                tomTotal.Text = total2.ToString();
+                tomPercentage.Text = (correct2 / total2).ToString();
+            }
+            else
+            {
+                var newBookHandler = new XLWorkbook();
+                newBookHandler.AddWorksheet();
+                newBookHandler.SaveAs(statBookURL);
+                var stats = new XLWorkbook($@"{Directory.GetCurrentDirectory().ToString()}\stats.xlsx");
+                var defaultSheet = stats.Worksheets.First();
+
+
+                float correct1 = numberparser(defaultSheet.Cell("B2").Value.ToString());
+                float total1 = numberparser(defaultSheet.Cell("C2").Value.ToString());
+                float correct2 = numberparser(defaultSheet.Cell("B3").Value.ToString());
+                float total2 = numberparser(defaultSheet.Cell("C3").Value.ToString());
+
+                turtleCorrect.Text = correct1.ToString();
+                turtleTotal.Text = total1.ToString();
+                turtlePercentage.Text = (correct1 / total1).ToString();
+
+                tomCorrect.Text = correct2.ToString();
+                tomTotal.Text = total2.ToString();
+                tomPercentage.Text = (correct2 / total2).ToString();
+            }
+            
             
     }
 
