@@ -35,26 +35,6 @@
             this.resetButton = new System.Windows.Forms.Button();
             this.addButton = new System.Windows.Forms.Button();
             this.dumpButton = new System.Windows.Forms.Button();
-            this.leadBox = new System.Windows.Forms.TextBox();
-            this.noTouchyLabel3 = new System.Windows.Forms.Label();
-            this.noTouchyLabel4 = new System.Windows.Forms.Label();
-            this.followBox = new System.Windows.Forms.TextBox();
-            this.resultBox = new System.Windows.Forms.TextBox();
-            this.resultLabel = new System.Windows.Forms.Label();
-            this.percentClearButton = new System.Windows.Forms.Button();
-            this.writeButton = new System.Windows.Forms.Button();
-            this.turtleCorrect = new System.Windows.Forms.TextBox();
-            this.turtleTotal = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.turtlePercentage = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.tomCorrect = new System.Windows.Forms.TextBox();
-            this.tomTotal = new System.Windows.Forms.TextBox();
-            this.tomPercentage = new System.Windows.Forms.TextBox();
-            this.readButton = new System.Windows.Forms.Button();
             this.balButton = new System.Windows.Forms.Button();
             this.bufButton = new System.Windows.Forms.Button();
             this.cinButton = new System.Windows.Forms.Button();
@@ -87,6 +67,8 @@
             this.tbbButton = new System.Windows.Forms.Button();
             this.wftButton = new System.Windows.Forms.Button();
             this.ariButton = new System.Windows.Forms.Button();
+            this.statButton = new System.Windows.Forms.Button();
+            this.undoButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // noTouchyLabel
@@ -111,7 +93,7 @@
             // 
             // bigListbox
             // 
-            this.bigListbox.Location = new System.Drawing.Point(12, 364);
+            this.bigListbox.Location = new System.Drawing.Point(14, 366);
             this.bigListbox.Name = "bigListbox";
             this.bigListbox.Size = new System.Drawing.Size(586, 498);
             this.bigListbox.TabIndex = 35;
@@ -124,7 +106,7 @@
             this.resetButton.ForeColor = System.Drawing.Color.White;
             this.resetButton.Location = new System.Drawing.Point(122, 335);
             this.resetButton.Name = "resetButton";
-            this.resetButton.Size = new System.Drawing.Size(129, 23);
+            this.resetButton.Size = new System.Drawing.Size(148, 23);
             this.resetButton.TabIndex = 36;
             this.resetButton.Text = "Clear Current Picks";
             this.resetButton.UseVisualStyleBackColor = false;
@@ -156,187 +138,10 @@
             this.dumpButton.UseVisualStyleBackColor = false;
             this.dumpButton.Click += new System.EventHandler(this.dumpButton_Click);
             // 
-            // leadBox
-            // 
-            this.leadBox.Location = new System.Drawing.Point(12, 902);
-            this.leadBox.Name = "leadBox";
-            this.leadBox.Size = new System.Drawing.Size(104, 20);
-            this.leadBox.TabIndex = 39;
-            // 
-            // noTouchyLabel3
-            // 
-            this.noTouchyLabel3.AutoSize = true;
-            this.noTouchyLabel3.ForeColor = System.Drawing.Color.White;
-            this.noTouchyLabel3.Location = new System.Drawing.Point(9, 877);
-            this.noTouchyLabel3.Name = "noTouchyLabel3";
-            this.noTouchyLabel3.Size = new System.Drawing.Size(125, 13);
-            this.noTouchyLabel3.TabIndex = 40;
-            this.noTouchyLabel3.Text = "Quick Percentage Finder";
-            // 
-            // noTouchyLabel4
-            // 
-            this.noTouchyLabel4.AutoSize = true;
-            this.noTouchyLabel4.ForeColor = System.Drawing.Color.White;
-            this.noTouchyLabel4.Location = new System.Drawing.Point(119, 905);
-            this.noTouchyLabel4.Name = "noTouchyLabel4";
-            this.noTouchyLabel4.Size = new System.Drawing.Size(16, 13);
-            this.noTouchyLabel4.TabIndex = 41;
-            this.noTouchyLabel4.Text = "of";
-            // 
-            // followBox
-            // 
-            this.followBox.Location = new System.Drawing.Point(140, 902);
-            this.followBox.Name = "followBox";
-            this.followBox.Size = new System.Drawing.Size(109, 20);
-            this.followBox.TabIndex = 42;
-            this.followBox.TextChanged += new System.EventHandler(this.followBox_TextChanged);
-            // 
-            // resultBox
-            // 
-            this.resultBox.Location = new System.Drawing.Point(277, 902);
-            this.resultBox.Name = "resultBox";
-            this.resultBox.Size = new System.Drawing.Size(100, 20);
-            this.resultBox.TabIndex = 43;
-            // 
-            // resultLabel
-            // 
-            this.resultLabel.AutoSize = true;
-            this.resultLabel.ForeColor = System.Drawing.Color.White;
-            this.resultLabel.Location = new System.Drawing.Point(257, 905);
-            this.resultLabel.Name = "resultLabel";
-            this.resultLabel.Size = new System.Drawing.Size(14, 13);
-            this.resultLabel.TabIndex = 44;
-            this.resultLabel.Text = "is";
-            // 
-            // percentClearButton
-            // 
-            this.percentClearButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(170)))), ((int)(((byte)(181)))));
-            this.percentClearButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.percentClearButton.ForeColor = System.Drawing.Color.White;
-            this.percentClearButton.Location = new System.Drawing.Point(496, 899);
-            this.percentClearButton.Name = "percentClearButton";
-            this.percentClearButton.Size = new System.Drawing.Size(102, 23);
-            this.percentClearButton.TabIndex = 45;
-            this.percentClearButton.Text = "Clear Percentages";
-            this.percentClearButton.UseVisualStyleBackColor = false;
-            this.percentClearButton.Click += new System.EventHandler(this.percentClearButton_Click);
-            // 
-            // writeButton
-            // 
-            this.writeButton.Location = new System.Drawing.Point(551, 955);
-            this.writeButton.Name = "writeButton";
-            this.writeButton.Size = new System.Drawing.Size(47, 30);
-            this.writeButton.TabIndex = 47;
-            this.writeButton.Text = "Write";
-            this.writeButton.UseVisualStyleBackColor = true;
-            this.writeButton.Click += new System.EventHandler(this.writeButton_Click);
-            // 
-            // turtleCorrect
-            // 
-            this.turtleCorrect.Location = new System.Drawing.Point(55, 952);
-            this.turtleCorrect.Name = "turtleCorrect";
-            this.turtleCorrect.Size = new System.Drawing.Size(104, 20);
-            this.turtleCorrect.TabIndex = 48;
-            // 
-            // turtleTotal
-            // 
-            this.turtleTotal.Location = new System.Drawing.Point(165, 952);
-            this.turtleTotal.Name = "turtleTotal";
-            this.turtleTotal.Size = new System.Drawing.Size(109, 20);
-            this.turtleTotal.TabIndex = 49;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(12, 955);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(37, 13);
-            this.label1.TabIndex = 50;
-            this.label1.Text = "Turtle:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(12, 981);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(31, 13);
-            this.label2.TabIndex = 51;
-            this.label2.Text = "Tom:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(88, 936);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(41, 13);
-            this.label3.TabIndex = 52;
-            this.label3.Text = "Correct";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(198, 936);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(31, 13);
-            this.label4.TabIndex = 53;
-            this.label4.Text = "Total";
-            // 
-            // turtlePercentage
-            // 
-            this.turtlePercentage.Location = new System.Drawing.Point(280, 952);
-            this.turtlePercentage.Name = "turtlePercentage";
-            this.turtlePercentage.Size = new System.Drawing.Size(109, 20);
-            this.turtlePercentage.TabIndex = 54;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(303, 936);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(62, 13);
-            this.label5.TabIndex = 55;
-            this.label5.Text = "Percentage";
-            // 
-            // tomCorrect
-            // 
-            this.tomCorrect.Location = new System.Drawing.Point(55, 978);
-            this.tomCorrect.Name = "tomCorrect";
-            this.tomCorrect.Size = new System.Drawing.Size(104, 20);
-            this.tomCorrect.TabIndex = 56;
-            // 
-            // tomTotal
-            // 
-            this.tomTotal.Location = new System.Drawing.Point(165, 978);
-            this.tomTotal.Name = "tomTotal";
-            this.tomTotal.Size = new System.Drawing.Size(109, 20);
-            this.tomTotal.TabIndex = 57;
-            // 
-            // tomPercentage
-            // 
-            this.tomPercentage.Location = new System.Drawing.Point(280, 978);
-            this.tomPercentage.Name = "tomPercentage";
-            this.tomPercentage.Size = new System.Drawing.Size(109, 20);
-            this.tomPercentage.TabIndex = 58;
-            // 
-            // readButton
-            // 
-            this.readButton.Location = new System.Drawing.Point(496, 955);
-            this.readButton.Name = "readButton";
-            this.readButton.Size = new System.Drawing.Size(49, 30);
-            this.readButton.TabIndex = 59;
-            this.readButton.Text = "Read";
-            this.readButton.UseVisualStyleBackColor = true;
-            this.readButton.Click += new System.EventHandler(this.readButton_Click);
-            // 
             // balButton
             // 
             this.balButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(170)))), ((int)(((byte)(181)))));
-            this.balButton.BackgroundImage = global::NFL_Predictions_Programmer.Properties.Resources.ravens;
+            this.balButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("balButton.BackgroundImage")));
             this.balButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.balButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.balButton.ForeColor = System.Drawing.Color.White;
@@ -350,7 +155,7 @@
             // bufButton
             // 
             this.bufButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(170)))), ((int)(((byte)(181)))));
-            this.bufButton.BackgroundImage = global::NFL_Predictions_Programmer.Properties.Resources.bills;
+            this.bufButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bufButton.BackgroundImage")));
             this.bufButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.bufButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.bufButton.ForeColor = System.Drawing.Color.White;
@@ -364,7 +169,7 @@
             // cinButton
             // 
             this.cinButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(170)))), ((int)(((byte)(181)))));
-            this.cinButton.BackgroundImage = global::NFL_Predictions_Programmer.Properties.Resources.bengals;
+            this.cinButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cinButton.BackgroundImage")));
             this.cinButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.cinButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cinButton.ForeColor = System.Drawing.Color.White;
@@ -378,7 +183,7 @@
             // cleButton
             // 
             this.cleButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(170)))), ((int)(((byte)(181)))));
-            this.cleButton.BackgroundImage = global::NFL_Predictions_Programmer.Properties.Resources.browns;
+            this.cleButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cleButton.BackgroundImage")));
             this.cleButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.cleButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cleButton.ForeColor = System.Drawing.Color.White;
@@ -392,7 +197,7 @@
             // denButton
             // 
             this.denButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(170)))), ((int)(((byte)(181)))));
-            this.denButton.BackgroundImage = global::NFL_Predictions_Programmer.Properties.Resources.broncos;
+            this.denButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("denButton.BackgroundImage")));
             this.denButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.denButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.denButton.ForeColor = System.Drawing.Color.White;
@@ -406,7 +211,7 @@
             // texButton
             // 
             this.texButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(170)))), ((int)(((byte)(181)))));
-            this.texButton.BackgroundImage = global::NFL_Predictions_Programmer.Properties.Resources.texans;
+            this.texButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("texButton.BackgroundImage")));
             this.texButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.texButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.texButton.ForeColor = System.Drawing.Color.White;
@@ -420,7 +225,7 @@
             // indButton
             // 
             this.indButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(170)))), ((int)(((byte)(181)))));
-            this.indButton.BackgroundImage = global::NFL_Predictions_Programmer.Properties.Resources.colts;
+            this.indButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("indButton.BackgroundImage")));
             this.indButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.indButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.indButton.ForeColor = System.Drawing.Color.White;
@@ -434,7 +239,7 @@
             // jaxButton
             // 
             this.jaxButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(170)))), ((int)(((byte)(181)))));
-            this.jaxButton.BackgroundImage = global::NFL_Predictions_Programmer.Properties.Resources.jags;
+            this.jaxButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("jaxButton.BackgroundImage")));
             this.jaxButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.jaxButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.jaxButton.ForeColor = System.Drawing.Color.White;
@@ -448,7 +253,7 @@
             // kccButton
             // 
             this.kccButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(170)))), ((int)(((byte)(181)))));
-            this.kccButton.BackgroundImage = global::NFL_Predictions_Programmer.Properties.Resources.chiefs;
+            this.kccButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("kccButton.BackgroundImage")));
             this.kccButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.kccButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.kccButton.ForeColor = System.Drawing.Color.White;
@@ -462,7 +267,7 @@
             // lvrButton
             // 
             this.lvrButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(170)))), ((int)(((byte)(181)))));
-            this.lvrButton.BackgroundImage = global::NFL_Predictions_Programmer.Properties.Resources.raiders;
+            this.lvrButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("lvrButton.BackgroundImage")));
             this.lvrButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.lvrButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lvrButton.ForeColor = System.Drawing.Color.White;
@@ -476,7 +281,7 @@
             // lacButton
             // 
             this.lacButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(170)))), ((int)(((byte)(181)))));
-            this.lacButton.BackgroundImage = global::NFL_Predictions_Programmer.Properties.Resources.chargers;
+            this.lacButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("lacButton.BackgroundImage")));
             this.lacButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.lacButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lacButton.ForeColor = System.Drawing.Color.White;
@@ -490,7 +295,7 @@
             // miaButton
             // 
             this.miaButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(170)))), ((int)(((byte)(181)))));
-            this.miaButton.BackgroundImage = global::NFL_Predictions_Programmer.Properties.Resources.dolphins;
+            this.miaButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("miaButton.BackgroundImage")));
             this.miaButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.miaButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.miaButton.ForeColor = System.Drawing.Color.White;
@@ -504,7 +309,7 @@
             // nepButton
             // 
             this.nepButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(170)))), ((int)(((byte)(181)))));
-            this.nepButton.BackgroundImage = global::NFL_Predictions_Programmer.Properties.Resources.patriots;
+            this.nepButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("nepButton.BackgroundImage")));
             this.nepButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.nepButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.nepButton.ForeColor = System.Drawing.Color.White;
@@ -518,7 +323,7 @@
             // nyjButton
             // 
             this.nyjButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(170)))), ((int)(((byte)(181)))));
-            this.nyjButton.BackgroundImage = global::NFL_Predictions_Programmer.Properties.Resources.jets;
+            this.nyjButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("nyjButton.BackgroundImage")));
             this.nyjButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.nyjButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.nyjButton.ForeColor = System.Drawing.Color.White;
@@ -532,7 +337,7 @@
             // pitButton
             // 
             this.pitButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(170)))), ((int)(((byte)(181)))));
-            this.pitButton.BackgroundImage = global::NFL_Predictions_Programmer.Properties.Resources.steelers;
+            this.pitButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pitButton.BackgroundImage")));
             this.pitButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pitButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.pitButton.ForeColor = System.Drawing.Color.White;
@@ -546,7 +351,7 @@
             // tenButton
             // 
             this.tenButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(170)))), ((int)(((byte)(181)))));
-            this.tenButton.BackgroundImage = global::NFL_Predictions_Programmer.Properties.Resources.titans;
+            this.tenButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tenButton.BackgroundImage")));
             this.tenButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.tenButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.tenButton.ForeColor = System.Drawing.Color.White;
@@ -560,7 +365,7 @@
             // atlButton
             // 
             this.atlButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(170)))), ((int)(((byte)(181)))));
-            this.atlButton.BackgroundImage = global::NFL_Predictions_Programmer.Properties.Resources.falcons;
+            this.atlButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("atlButton.BackgroundImage")));
             this.atlButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.atlButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.atlButton.ForeColor = System.Drawing.Color.White;
@@ -574,7 +379,7 @@
             // carButton
             // 
             this.carButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(170)))), ((int)(((byte)(181)))));
-            this.carButton.BackgroundImage = global::NFL_Predictions_Programmer.Properties.Resources.panthers;
+            this.carButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("carButton.BackgroundImage")));
             this.carButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.carButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.carButton.ForeColor = System.Drawing.Color.White;
@@ -588,7 +393,7 @@
             // chiButton
             // 
             this.chiButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(170)))), ((int)(((byte)(181)))));
-            this.chiButton.BackgroundImage = global::NFL_Predictions_Programmer.Properties.Resources.bears;
+            this.chiButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("chiButton.BackgroundImage")));
             this.chiButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.chiButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.chiButton.ForeColor = System.Drawing.Color.White;
@@ -602,7 +407,7 @@
             // dalButton
             // 
             this.dalButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(170)))), ((int)(((byte)(181)))));
-            this.dalButton.BackgroundImage = global::NFL_Predictions_Programmer.Properties.Resources.cowboys;
+            this.dalButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("dalButton.BackgroundImage")));
             this.dalButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.dalButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.dalButton.ForeColor = System.Drawing.Color.White;
@@ -616,7 +421,7 @@
             // detButton
             // 
             this.detButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(170)))), ((int)(((byte)(181)))));
-            this.detButton.BackgroundImage = global::NFL_Predictions_Programmer.Properties.Resources.lions;
+            this.detButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("detButton.BackgroundImage")));
             this.detButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.detButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.detButton.ForeColor = System.Drawing.Color.White;
@@ -630,7 +435,7 @@
             // gbButton
             // 
             this.gbButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(170)))), ((int)(((byte)(181)))));
-            this.gbButton.BackgroundImage = global::NFL_Predictions_Programmer.Properties.Resources.packers;
+            this.gbButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("gbButton.BackgroundImage")));
             this.gbButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.gbButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.gbButton.ForeColor = System.Drawing.Color.White;
@@ -644,7 +449,7 @@
             // larButton
             // 
             this.larButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(170)))), ((int)(((byte)(181)))));
-            this.larButton.BackgroundImage = global::NFL_Predictions_Programmer.Properties.Resources.rams;
+            this.larButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("larButton.BackgroundImage")));
             this.larButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.larButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.larButton.ForeColor = System.Drawing.Color.White;
@@ -658,7 +463,7 @@
             // minButton
             // 
             this.minButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(170)))), ((int)(((byte)(181)))));
-            this.minButton.BackgroundImage = global::NFL_Predictions_Programmer.Properties.Resources.vikings;
+            this.minButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("minButton.BackgroundImage")));
             this.minButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.minButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.minButton.ForeColor = System.Drawing.Color.White;
@@ -672,7 +477,7 @@
             // nosButton
             // 
             this.nosButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(170)))), ((int)(((byte)(181)))));
-            this.nosButton.BackgroundImage = global::NFL_Predictions_Programmer.Properties.Resources.saints;
+            this.nosButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("nosButton.BackgroundImage")));
             this.nosButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.nosButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.nosButton.ForeColor = System.Drawing.Color.White;
@@ -686,7 +491,7 @@
             // nygButton
             // 
             this.nygButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(170)))), ((int)(((byte)(181)))));
-            this.nygButton.BackgroundImage = global::NFL_Predictions_Programmer.Properties.Resources.giants;
+            this.nygButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("nygButton.BackgroundImage")));
             this.nygButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.nygButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.nygButton.ForeColor = System.Drawing.Color.White;
@@ -700,7 +505,7 @@
             // phlButton
             // 
             this.phlButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(170)))), ((int)(((byte)(181)))));
-            this.phlButton.BackgroundImage = global::NFL_Predictions_Programmer.Properties.Resources.eagles;
+            this.phlButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("phlButton.BackgroundImage")));
             this.phlButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.phlButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.phlButton.ForeColor = System.Drawing.Color.White;
@@ -714,7 +519,7 @@
             // sfoButton
             // 
             this.sfoButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(170)))), ((int)(((byte)(181)))));
-            this.sfoButton.BackgroundImage = global::NFL_Predictions_Programmer.Properties.Resources._49ers;
+            this.sfoButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("sfoButton.BackgroundImage")));
             this.sfoButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.sfoButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.sfoButton.ForeColor = System.Drawing.Color.White;
@@ -728,7 +533,7 @@
             // seaButton
             // 
             this.seaButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(170)))), ((int)(((byte)(181)))));
-            this.seaButton.BackgroundImage = global::NFL_Predictions_Programmer.Properties.Resources.seahawks;
+            this.seaButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("seaButton.BackgroundImage")));
             this.seaButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.seaButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.seaButton.ForeColor = System.Drawing.Color.White;
@@ -742,7 +547,7 @@
             // tbbButton
             // 
             this.tbbButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(170)))), ((int)(((byte)(181)))));
-            this.tbbButton.BackgroundImage = global::NFL_Predictions_Programmer.Properties.Resources.buccs;
+            this.tbbButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tbbButton.BackgroundImage")));
             this.tbbButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.tbbButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.tbbButton.ForeColor = System.Drawing.Color.White;
@@ -756,7 +561,7 @@
             // wftButton
             // 
             this.wftButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(170)))), ((int)(((byte)(181)))));
-            this.wftButton.BackgroundImage = global::NFL_Predictions_Programmer.Properties.Resources.commander;
+            this.wftButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("wftButton.BackgroundImage")));
             this.wftButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.wftButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.wftButton.ForeColor = System.Drawing.Color.White;
@@ -770,7 +575,7 @@
             // ariButton
             // 
             this.ariButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(170)))), ((int)(((byte)(181)))));
-            this.ariButton.BackgroundImage = global::NFL_Predictions_Programmer.Properties.Resources.cardinals;
+            this.ariButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ariButton.BackgroundImage")));
             this.ariButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ariButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.ariButton.ForeColor = System.Drawing.Color.White;
@@ -781,26 +586,41 @@
             this.ariButton.UseVisualStyleBackColor = false;
             this.ariButton.Click += new System.EventHandler(this.ariButton_Click);
             // 
+            // statButton
+            // 
+            this.statButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(170)))), ((int)(((byte)(181)))));
+            this.statButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.statButton.ForeColor = System.Drawing.Color.White;
+            this.statButton.Location = new System.Drawing.Point(496, 870);
+            this.statButton.Name = "statButton";
+            this.statButton.Size = new System.Drawing.Size(102, 23);
+            this.statButton.TabIndex = 60;
+            this.statButton.Text = "Show Stats Page";
+            this.statButton.UseVisualStyleBackColor = false;
+            this.statButton.Click += new System.EventHandler(this.statButton_Click);
+            // 
+            // undoButton
+            // 
+            this.undoButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(170)))), ((int)(((byte)(181)))));
+            this.undoButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.undoButton.ForeColor = System.Drawing.Color.White;
+            this.undoButton.Location = new System.Drawing.Point(340, 335);
+            this.undoButton.Name = "undoButton";
+            this.undoButton.Size = new System.Drawing.Size(150, 23);
+            this.undoButton.TabIndex = 61;
+            this.undoButton.Text = "Undo Last Line";
+            this.undoButton.UseVisualStyleBackColor = false;
+            this.undoButton.Click += new System.EventHandler(this.undoButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(47)))), ((int)(((byte)(51)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(612, 1010);
-            this.Controls.Add(this.readButton);
-            this.Controls.Add(this.tomPercentage);
-            this.Controls.Add(this.tomTotal);
-            this.Controls.Add(this.tomCorrect);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.turtlePercentage);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.turtleTotal);
-            this.Controls.Add(this.turtleCorrect);
-            this.Controls.Add(this.writeButton);
+            this.ClientSize = new System.Drawing.Size(612, 903);
+            this.Controls.Add(this.undoButton);
+            this.Controls.Add(this.statButton);
             this.Controls.Add(this.balButton);
             this.Controls.Add(this.bufButton);
             this.Controls.Add(this.cinButton);
@@ -817,13 +637,6 @@
             this.Controls.Add(this.nyjButton);
             this.Controls.Add(this.pitButton);
             this.Controls.Add(this.tenButton);
-            this.Controls.Add(this.percentClearButton);
-            this.Controls.Add(this.resultLabel);
-            this.Controls.Add(this.resultBox);
-            this.Controls.Add(this.followBox);
-            this.Controls.Add(this.noTouchyLabel4);
-            this.Controls.Add(this.noTouchyLabel3);
-            this.Controls.Add(this.leadBox);
             this.Controls.Add(this.dumpButton);
             this.Controls.Add(this.addButton);
             this.Controls.Add(this.resetButton);
@@ -896,26 +709,8 @@
         private System.Windows.Forms.Button resetButton;
         private System.Windows.Forms.Button addButton;
         private System.Windows.Forms.Button dumpButton;
-        private System.Windows.Forms.TextBox leadBox;
-        private System.Windows.Forms.Label noTouchyLabel3;
-        private System.Windows.Forms.Label noTouchyLabel4;
-        private System.Windows.Forms.TextBox followBox;
-        private System.Windows.Forms.TextBox resultBox;
-        private System.Windows.Forms.Label resultLabel;
-        private System.Windows.Forms.Button percentClearButton;
-        private System.Windows.Forms.Button writeButton;
-        private System.Windows.Forms.TextBox turtleCorrect;
-        private System.Windows.Forms.TextBox turtleTotal;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox turtlePercentage;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox tomCorrect;
-        private System.Windows.Forms.TextBox tomTotal;
-        private System.Windows.Forms.TextBox tomPercentage;
-        private System.Windows.Forms.Button readButton;
+        private System.Windows.Forms.Button statButton;
+        private System.Windows.Forms.Button undoButton;
     }
 }
 

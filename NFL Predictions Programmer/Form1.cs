@@ -34,8 +34,6 @@ namespace NFL_Predictions_Programmer
             Console.WriteLine("NFL Serializer INIT");
             resetButton.PerformClick();
             Console.WriteLine("TempRefresh - Successful");
-            readButton.PerformClick();
-            Console.WriteLine("Stats Faking - Successful");
         }
 
         #region teambuttonclickcommands
@@ -556,6 +554,8 @@ namespace NFL_Predictions_Programmer
         #region managementcontrols
         private void addButton_Click(object sender, EventArgs e)
         {
+            textboxHold = "";
+            textboxHold = bigListbox.Text;
             bigListbox.AppendText(agregator.ToString());
             resetButton.PerformClick();
         }
@@ -613,7 +613,17 @@ namespace NFL_Predictions_Programmer
             bigListbox.Clear();
         }
 
-
+        private void undoButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                bigListbox.Text = textboxHold;
+            }
+            catch
+            {
+                MessageBox.Show("either the bool is broke, or the box didnt have previous content.");
+            }
+        }
 
         #endregion
 
@@ -650,107 +660,20 @@ namespace NFL_Predictions_Programmer
         public bool nyjClicked;
         public bool pitClicked;
         public bool tenClicked;
+        public string textboxHold;
         #endregion
-
 
         #region statsmanagement
 
-        
-
-        private void percentClearButton_Click(object sender, EventArgs e)
+        private void statButton_Click(object sender, EventArgs e)
         {
-            leadBox.Clear();
-            followBox.Clear();
-            resultBox.Clear();
-        }
-
-        private void followBox_TextChanged(object sender, EventArgs e)
-        {
-            if (followBox.TextLength > 0)
-            {
-                float result = numberparser(leadBox.Text) / numberparser(followBox.Text);
-                resultBox.Text = result.ToString();
-            }
-            else
-            {
-                //donothing
-            }
-            
-        }
-
-        private void readButton_Click(object sender, EventArgs e)
-        {
-            var statBookURL = $@"{Directory.GetCurrentDirectory().ToString()}\stats.xlsx";
-
-            if (File.Exists(statBookURL))
-            {
-                var stats = new XLWorkbook($@"{Directory.GetCurrentDirectory().ToString()}\stats.xlsx");
-                var defaultSheet = stats.Worksheets.First();
-
-
-                float correct1 = numberparser(defaultSheet.Cell("B2").Value.ToString());
-                float total1 = numberparser(defaultSheet.Cell("C2").Value.ToString());
-                float correct2 = numberparser(defaultSheet.Cell("B3").Value.ToString());
-                float total2 = numberparser(defaultSheet.Cell("C3").Value.ToString());
-
-                turtleCorrect.Text = correct1.ToString();
-                turtleTotal.Text = total1.ToString();
-                turtlePercentage.Text = (correct1 / total1).ToString();
-
-                tomCorrect.Text = correct2.ToString();
-                tomTotal.Text = total2.ToString();
-                tomPercentage.Text = (correct2 / total2).ToString();
-            }
-            else
-            {
-                var newBookHandler = new XLWorkbook();
-                newBookHandler.AddWorksheet();
-                newBookHandler.SaveAs(statBookURL);
-                var stats = new XLWorkbook($@"{Directory.GetCurrentDirectory().ToString()}\stats.xlsx");
-                var defaultSheet = stats.Worksheets.First();
-
-
-                float correct1 = numberparser(defaultSheet.Cell("B2").Value.ToString());
-                float total1 = numberparser(defaultSheet.Cell("C2").Value.ToString());
-                float correct2 = numberparser(defaultSheet.Cell("B3").Value.ToString());
-                float total2 = numberparser(defaultSheet.Cell("C3").Value.ToString());
-
-                turtleCorrect.Text = correct1.ToString();
-                turtleTotal.Text = total1.ToString();
-                turtlePercentage.Text = (correct1 / total1).ToString();
-
-                tomCorrect.Text = correct2.ToString();
-                tomTotal.Text = total2.ToString();
-                tomPercentage.Text = (correct2 / total2).ToString();
-            }
-            
-            
-    }
-
-        private void writeButton_Click(object sender, EventArgs e)
-        {
-            var stats = new XLWorkbook($@"{Directory.GetCurrentDirectory().ToString()}\stats.xlsx");
-            var defaultSheet = stats.Worksheets.First();
-
-            float correct1 = numberparser(turtleCorrect.Text);
-            float total1 = numberparser(turtleTotal.Text);
-            float correct2 = numberparser(tomCorrect.Text);
-            float total2 = numberparser(tomTotal.Text);
-
-            defaultSheet.Cell("B2").Value = correct1;
-            defaultSheet.Cell("C2").Value = total1;
-            defaultSheet.Cell("B3").Value = correct2;
-            defaultSheet.Cell("C3").Value = total2;
-
-            stats.SaveAs($@"{Directory.GetCurrentDirectory().ToString()}\stats.xlsx");
-
-            System.Threading.Thread.Sleep(50);
-
-            readButton.PerformClick();
-            
+            Form stat = new statForm();
+            stat.Show();
         }
 
         #endregion
+
+
 
 
     }
